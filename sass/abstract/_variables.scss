@@ -3,15 +3,23 @@ $color-primary: #55c57a;
 $color-primary--tint: #7ed56f;
 $color-primary--shade: #28b485;
 
+$color-secondary: #ff7730;
+$color-secondary--tint: #ffb900;
+
+$color-tertiary: #5643fa;
+$color-tertiary--tint: #2998ff;
+
 $color-grey: #777;
+$color-grey--shade-1: #333;
 $color-grey--tint-1: #f0f0f0;
+$color-grey--tint-2: #ccc;
 
 $color-white: #fff;
 $color-black: #000;
 
 // GRID
 $grid-layout: 114rem;
-$gutter-horizontal: 6rem;
+$gutter-horizontal: 5rem;
 $gutter-vertical: 8rem;
 
 // FONTS

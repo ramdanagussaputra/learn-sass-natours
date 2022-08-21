@@ -2,8 +2,8 @@
     @include clearfix;
 
     max-width: $grid-layout;
-    // background-color: $color-primary--tint;
     margin: 0 auto;
+    // background-color: $color-primary--tint;
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
