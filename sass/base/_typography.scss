@@ -7,31 +7,39 @@ body {
 }
 
 .heading-primary {
-    display: flex;
-    flex-direction: column;
     color: $color-white;
     text-transform: uppercase;
     margin-bottom: 8rem;
     backface-visibility: hidden;
 
     &--main {
+        display: block;
         font-size: 7rem;
         font-weight: 400;
         letter-spacing: 3.5rem;
-
+        text-align: center;
         animation-name: moveInLeft;
         animation-duration: 1s;
         animation-timing-function: ease-out;
+
+        @include respond(phone) {
+            font-size: 6rem;
+            letter-spacing: 2rem;
+        }
     }
 
     &--sub {
+        display: block;
         font-size: 2rem;
         letter-spacing: 1.5rem;
         font-weight: 700;
-
         animation-name: moveInRight;
         animation-duration: 1s;
         animation-timing-function: ease-out;
+
+        @include respond(phone) {
+            letter-spacing: 1rem;
+        }
     }
 }
 
@@ -40,8 +48,13 @@ body {
     font-weight: 700;
     letter-spacing: 2px;
     text-transform: uppercase;
-    @include textBackgroundClip;
     transition: all 0.2s;
+    @include textBackgroundClip;
+
+    @include respond(tabPot) {
+        font-size: 3.2rem;
+        letter-spacing: 1px;
+    }
 
     &:hover {
         transform: skewX(15deg) skewY(2deg);

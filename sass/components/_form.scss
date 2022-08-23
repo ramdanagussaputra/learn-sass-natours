@@ -15,6 +15,10 @@
         border-radius: 5px;
         transition: all 0.3s;
 
+        @include respond(tabPot) {
+            width: 100%;
+        }
+
         &:focus {
             outline: none;
             box-shadow: 0 1rem 1rem rgba($color-grey, 0.1);
@@ -47,6 +51,12 @@
     &__radio-group {
         display: inline-block;
         width: 45%;
+
+        @include respond(tabPot) {
+            display: block;
+            margin-bottom: 1.5rem;
+            width: 80%;
+        }
     }
 
     &__radio-label {

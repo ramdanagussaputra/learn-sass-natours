@@ -3,18 +3,33 @@
 
     max-width: $grid-layout;
     margin: 0 auto;
-    // background-color: $color-primary--tint;
+
+    @include respond(tabPot) {
+        max-width: 55rem;
+        padding: 0 3rem;
+    }
+
+    // @include respond(phone) {
+    //     max-width: 30rem;
+    // }
 
     &:not(:last-child) {
         margin-bottom: $gutter-vertical;
     }
 
     [class^='col'] {
-        // background-color: $color-primary--shade;
         float: left;
 
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
+
+            @include respond(tabPot) {
+                margin-bottom: $gutter-horizontal--big;
+            }
+        }
+
+        @include respond(tabPot) {
+            width: 100% !important;
         }
     }
 

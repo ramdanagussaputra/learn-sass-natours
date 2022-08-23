@@ -31,3 +31,37 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
+// MEDIA QUERIES MANAGER
+/*
+    phone > 600px / 37.5 em
+    tabPot > 900px / 56.25 em
+    tabLand > 1200px / 75 em
+    bigDesktop > 1800px / 112.5 em
+*/
+
+@mixin respond($screen) {
+    @if ($screen == phone) {
+        @media only screen and (max-width: 37.5em) {
+            @content;
+        }
+    }
+
+    @if ($screen == tabPot) {
+        @media only screen and (max-width: 56.25em) {
+            @content;
+        }
+    }
+
+    @if ($screen == tabLand) {
+        @media only screen and (max-width: 75em) {
+            @content;
+        }
+    }
+
+    @if ($screen == bigDesktop) {
+        @media only screen and (min-width: 112.5em) {
+            @content;
+        }
+    }
+}

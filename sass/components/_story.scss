@@ -8,16 +8,34 @@
     width: 75%;
     margin: 0 auto;
 
+    @include respond(tabPot) {
+        width: 100%;
+    }
+
+    @include respond(phone) {
+        transform: skewX(0);
+    }
+
     &__shape {
         width: 15rem;
         height: 15rem;
         float: left;
         shape-outside: circle(50% at 50% 50%);
+        -webkit-clip-path: circle(50% at 50% 50%);
         clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(17deg);
         position: relative;
         overflow: hidden;
         backface-visibility: hidden;
+
+        @include respond(tabPot) {
+            width: 12rem;
+            height: 12rem;
+        }
+
+        @include respond(phone) {
+            transform: translateX(-3rem) skewX(0);
+        }
     }
 
     &__img {
@@ -42,6 +60,16 @@
 
     &__text-box {
         transform: skewX(17deg);
+
+        @include respond(phone) {
+            transform: skewX(0);
+        }
+    }
+
+    &__text {
+        @include respond(tabPot) {
+            font-size: 1.4rem;
+        }
     }
 
     &:hover &__caption {

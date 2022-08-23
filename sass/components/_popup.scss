@@ -42,11 +42,28 @@
         width: 33.3333%;
         display: table-cell;
         line-height: 0;
+        font-size: 0;
+        overflow: hidden;
+
+        @include respond(tabLand) {
+            display: block;
+            width: 100%;
+        }
     }
 
     &__img {
         width: 100%;
         line-height: 0;
+        @include respond(tabLand) {
+            width: 50%;
+            display: inline-block;
+        }
+
+        &:first-child {
+            @include respond(tabLand) {
+                transform: scale(1.06);
+            }
+        }
     }
 
     &__right {
@@ -54,6 +71,35 @@
         display: table-cell;
         padding: 4rem;
         vertical-align: middle;
+        @include respond(tabLand) {
+            padding: 2rem;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        & .heading-secondary {
+            @include respond(tabPot) {
+                font-size: 2.8rem;
+            }
+
+            @include respond(phone) {
+                font-size: 2.4rem;
+            }
+        }
+
+        & .heading-tertiary {
+            @include respond(phone) {
+                font-size: 1.3rem;
+            }
+        }
+
+        & .btn {
+            @include respond(phone) {
+                font-size: 1.2rem;
+                padding: 1rem 2rem;
+            }
+        }
     }
 
     &__text {

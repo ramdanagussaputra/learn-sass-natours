@@ -2,7 +2,27 @@
     height: 95vh;
     position: relative;
     clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-    @include gradientBackground('hero');
+    @include gradientBackground('hero-small');
+
+    @media (min-resolution: 192dpi) and (min-width: 37.5em),
+        (-min-device-pixel-ratio: 192dpi) and (min-width: 37.5em),
+        (min-width: 125em) {
+        background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary--tint, 0.8),
+                rgba($color-primary, 0.8)
+            ),
+            url('../img/hero.jpg');
+    }
+
+    @include respond(tabPot) {
+        clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    }
+
+    @include respond(phone) {
+        height: 85vh;
+        clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+    }
 
     &__logo-box {
         position: absolute;

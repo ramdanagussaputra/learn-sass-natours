@@ -9,8 +9,20 @@
     box-shadow: 0 3rem 6rem rgba($color-black, 0.2);
     border-radius: 5px;
 
+    @include respond(tabPot) {
+        background-image: linear-gradient(
+                rgba($color-white, 0.8),
+                rgba($color-white, 0.8)
+            ),
+            url('../img/nat-10.jpg');
+    }
+
     &__form {
         width: 55%;
         padding: 6rem;
+
+        @include respond(tabPot) {
+            width: 100%;
+        }
     }
 }
