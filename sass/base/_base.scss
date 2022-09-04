@@ -3,11 +3,11 @@
 *::before {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
 }
 
 html {
     font-size: 62.5%;
+    box-sizing: border-box;
 
     @include respond(tabLand) {
         font-size: 56.25%;
@@ -27,7 +27,8 @@ html {
 }
 
 body {
-    box-sizing: border-box;
+    box-sizing: inherit;
+
     padding: 3.8rem;
 
     @include respond(phone) {
